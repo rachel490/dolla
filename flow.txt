@@ -5,6 +5,11 @@
 - react-icons : 여러 icon들을 사용할 수 있는 라이브러리 -> fontawesome도 포함
 
 
+< extensions >
+es7 : react template 단축키로 쉽게 사용가능 -> rafce : react arrow function component export
+vscode-styled-components Extension : styled component 사용할때 css 자동완성 기능을 수행해줌.
+
+
 < Directory 구조 >
 src 
 ㄴ components
@@ -30,3 +35,21 @@ Navbar
             ㄴ NavBtn : 로그인 버튼
                 ㄴ NavBtnLink (router) : 로그인 페이지로 이동
 
+- 막혔던 점
+    1. link 색상 바꿀 때 : button에 hover할 경우 color도 바뀌었으면 좋겠는데 안바뀜
+        button에 color 속성 부여하면 link의 색상 바뀌지 않음
+        button hover했을 때 background color 바꾸고, link hover했을 때 color 바꾸면 => text에만 hover할때 글자색 바뀌고 그이외의 버튼 여백에서는 적용안됨
+
+        => 해결 : btn에 background-color 입히는 것이 아니라 link에 모든 스타일 적용시킴.
+
+    2. desktop version에서 padding을 양옆으로 많이 줬는데 (150px 정도) 모바일 버전으로 하니 너무 많음.. 어떻게 조절가능?
+        => 해결 : max-width를 줘서 padding이 있는 것처럼 사용가능
+
+    3. navmenu에서 justify-content를 space-between으로 해서 여백을 설정해줬으나 너무 넓음... (width: 50%)
+        => 해결 : navItem(li)에 padding을 줌...
+
+
+
+- TIL
+    router의 Link의 to : page간의 이동이므로 '/'를 사용
+    scroll의 Link의 to : page내에서 특정 부분으로 이동하는 것이므로 '/' 사용하지 않음 => 이동할 부분의 id이름을 보통 넣음
