@@ -1,0 +1,32 @@
+< library >
+- react-router-dom : 다른 페이지로 이동하는 router을 담당
+- react-scroll : 같은 페이지 내에서 이동하는 router을 담당
+- styled-components : component를 styling할 때 쓰이는 라이브러리 (css-in-js)
+- react-icons : 여러 icon들을 사용할 수 있는 라이브러리 -> fontawesome도 포함
+
+
+< Directory 구조 >
+src 
+ㄴ components
+    ㄴ Footer
+        ㄴ index.js : index.js를 사용하면 import할때 굳이 파일 이름을 안붙여줘도 바로 index.js를 찾아서 사용하므로 덜 번거로움 -> Footer.jsx가 난 더 좋을듯 ..?
+        ㄴ FooterElement.js : 이 이름보다는 Footer.styles.jsx가 더 나은 듯
+ㄴ pages
+ㄴ images
+ㄴ videos
+
+
+< Flow Chart >
+
+Navbar
+- html element tag 대신 styled component tag를 사용 -> 이름 잘 짓기
+    
+    Nav 
+     ㄴ NavbarContainer
+            ㄴ NavLogo : 로고 (router)
+            ㄴ NavMenu : 카테고리 (about, discover,services, signUp) - ul
+                ㄴ NavItem : li 
+                    ㄴ NavLink (scroll) : 페이지 내에서 해당 부분으로 이동
+            ㄴ NavBtn : 로그인 버튼
+                ㄴ NavBtnLink (router) : 로그인 페이지로 이동
+
