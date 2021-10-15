@@ -77,3 +77,13 @@ Sidebar
     - click 이벤트가 일어나는 곳에서 toggle함수 사용
     - 모달창과 같이 다른 곳에 클릭했을 때도 찾을 닫게하고 싶은 경우에는 제일 상위 컨테이너에 onClick={toggle}로 주기
     **주의사항 : toggle함수를 작성할때는 isOpen을 true로 바꾸는 것이 아닌 !isOpen으로 바꿔야함. (true -> false, false -> true로 바꿔줘야 하므로)
+
+
+
+
+
+
+
+HeroSection
+
+- Video 자동재생기능이 위해서는 muted 속성이 필요함
