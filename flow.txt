@@ -49,7 +49,31 @@ Navbar
         => 해결 : navItem(li)에 padding을 줌...
 
 
-
 - TIL
     router의 Link의 to : page간의 이동이므로 '/'를 사용
     scroll의 Link의 to : page내에서 특정 부분으로 이동하는 것이므로 '/' 사용하지 않음 => 이동할 부분의 id이름을 보통 넣음
+
+
+
+
+
+Sidebar
+- mobile화면에서 햄버거 nav 버튼을 눌렀을때 나타나는 창
+
+    SidebarContainer    
+        ㄴ Icon 
+            ㄴ CloseIcon : 닫는 버튼 
+        ㄴ SidebarWrapper 
+            ㄴ SidebarMenu : ul
+                ㄴ SidebarLink : scroll router => 페이지내 다른 섹션으로 이동
+            ㄴ SidebarBtnWrapper
+                ㄴ SidebarRoute : react router dom => sign in 페이지로 이동하는 버튼
+
+
+- TIL
+    창을 열고 닫는 것을 만들때: toggle이용
+    - setState를 이용해서 변수 선언 => isOpen:false와 같은 변수를 설정해서 false를 줌 
+    - 필요한 곳에 props로 전달
+    - click 이벤트가 일어나는 곳에서 toggle함수 사용
+    - 모달창과 같이 다른 곳에 클릭했을 때도 찾을 닫게하고 싶은 경우에는 제일 상위 컨테이너에 onClick={toggle}로 주기
+    **주의사항 : toggle함수를 작성할때는 isOpen을 true로 바꾸는 것이 아닌 !isOpen으로 바꿔야함. (true -> false, false -> true로 바꿔줘야 하므로)
