@@ -6,7 +6,7 @@ import Navbar from '../components/Navbar/Navbar';
 import ServiceSection from '../components/ServiceSection/ServiceSection';
 import Sidebar from '../components/Sidebar/Sidebar';
 
-const Home = () => {
+const HomePage = () => {
   const [isOpen, setIsOpen] = useState(false); //isOpen=false로 초기값 설정
 
   const toggle = () => {
@@ -26,4 +26,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomePage;
