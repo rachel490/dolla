@@ -17,7 +17,7 @@ import {
   CopyRight,
 } from './Footer.style';
 
-const Footer = () => {
+const Footer = ({toggleHome}) => {
   return (
     <FooterContainer>
       <FooterWrapper>
@@ -58,7 +58,7 @@ const Footer = () => {
  
       <SocialMediaContainer>
         <SocialMediaWrapper>
-          <SocialMediaLogo to='/'>dolla</SocialMediaLogo>
+          <SocialMediaLogo to='/' onClick={toggleHome}>dolla</SocialMediaLogo>
           <CopyRight>
             © {new Date().getFullYear()} Placide IRANDOR. All Rights Reserved.
           </CopyRight>

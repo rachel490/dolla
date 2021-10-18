@@ -46,6 +46,7 @@ export const ServicesWrapper = styled.div`
     }
 
 `;
+
 export const ServicesCard = styled.div`
     background-color: #fff;
     display: flex; 

@@ -24,7 +24,7 @@ const ServicesCardItem = ({data :{img,alt,header,description}}) => {
 const ServiceSection = () => {
   return (
     <>
-      <ServicesSection>
+      <ServicesSection id="services">
         <ServicesH1>Our Services</ServicesH1>
         <ServicesWrapper>
           {data.map(item => <ServicesCardItem data={item}/>)}
