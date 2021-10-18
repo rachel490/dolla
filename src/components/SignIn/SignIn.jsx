@@ -1,40 +1,35 @@
 import React from 'react';
 import {
   SignInContainer,
-  LogoWrapper,
   Logo,
-  SignInBox,
-  SignInH1,
-  SignInForm,
-  InputWrapper,
-  Label,
-  Input,
-  ContinueButton,
-  SignInLink
+  SignInWrapper,
+  FormWrapper,
+  Form,
+  FormTitle,
+  FormLabel,
+  FormInput,
+  FormText,
+  FormButton
 } from './SignIn.style';
 
 const SignIn = () => {
   return (
     <>
       <SignInContainer>
-        <LogoWrapper>
+        <SignInWrapper>
           <Logo to='/'>dolla</Logo>
-        </LogoWrapper>
-        <SignInBox>
-          <SignInH1>Sign In to your account</SignInH1>
-          <SignInForm>
-            <InputWrapper>
-              <Label  htmlFor='email'>Email</Label>
-              <Input type='text' id='email' />
-            </InputWrapper>
-            <InputWrapper>
-              <Label  htmlFor='pw'>Password</Label>
-              <Input type='text' id='pw' />
-            </InputWrapper>
-            <ContinueButton tpye='submit' primary="true" big="true" fontBig="true">Continue</ContinueButton>
-          </SignInForm>
-          <SignInLink to='#'>Forgot Password?</SignInLink>
-        </SignInBox>
+          <FormWrapper>
+            <Form action='#'>
+              <FormTitle>Sign In to your account</FormTitle>
+              <FormLabel htmlFor='for'>Email</FormLabel>
+              <FormInput type='email' required />
+              <FormLabel htmlFor='for'>Password</FormLabel>
+              <FormInput type='password' required />
+              <FormButton type='submit'>Continue</FormButton>
+              <FormText>Forgot Password?</FormText>
+            </Form>
+          </FormWrapper>
+        </SignInWrapper>
       </SignInContainer>
     </>
   );
